@@ -17,6 +17,9 @@
         <?php endforeach;?>
     </select>
     <textarea name="description" id="desc" cols="30" rows="10"></textarea>
+    <input type="number" name="price-one" placeholder="Цена до 1 сут.">
+    <input type="number" name="price-two" placeholder="Цена от 2 до 5 сут.">
+    <input type="number" name="price-three" placeholder="Цена от 5 сут.">
     <input type="submit" value="Добавить">
 </form>
 </body>

@@ -32,6 +32,7 @@
         <td>№</td>
         <td>Наименование</td>
         <td>Категория</td>
+        <td>Цены</td>
         <td>Действия</td>
     </tr>
     </thead>
@@ -41,6 +42,7 @@
             <td><?=$good['id']?></td>
             <td><?=$good['name']?></td>
             <td><?=$good['category_name']?></td>
+            <td><?=$good['prices']?></td>
             <td>
                 <a href="/goods/<?=$good['id']?>/edit">Редактировать</a>
                 <a href="/goods/<?=$good['id']?>/delete">Удалить</a>

@@ -15,6 +15,7 @@ class GoodController extends Controller
             'goods' => ORM::forTable('goods')
                 ->select('goods.*')
                 ->select('categories.name', 'category_name')
+                ->select_expr("CONCAT(goods.price_one, ', ', goods.price_two, ', ', goods.price_three)", 'prices')
                 ->leftOuterJoin('categories', 'goods.category_id = categories.id')
                 ->findArray(),
         ]);
@@ -42,6 +43,9 @@ class GoodController extends Controller
             'category_id' => $request->getParsedBody()['category'] ,
             'description' => $request->getParsedBody()['description'],
             'slug' => $this->slugify($request->getParsedBody()['name']),
+            'price_one' => $request->getParsedBody()['price-one'],
+            'price_two' => $request->getParsedBody()['price-two'],
+            'price_three' => $request->getParsedBody()['price-three'],
         ])->save();
 
         return $response->withHeader('Location', '/goods')->withStatus(302);
@@ -68,6 +72,9 @@ class GoodController extends Controller
             'category_id' => $request->getParsedBody()['category'],
             'description' => $request->getParsedBody()['description'],
             'slug' => $this->slugify($request->getParsedBody()['name']),
+            'price_one' => $request->getParsedBody()['price-one'],
+            'price_two' => $request->getParsedBody()['price-two'],
+            'price_three' => $request->getParsedBody()['price-three'],
         ])->save();
         return $response->withHeader('Location', '/goods')->withStatus(302);
     }

@@ -33,6 +33,15 @@
                 <div class="card">
                     <h3><?=$good['name']?></h3>
                     <p><?= $good['category_name']?></p>
+                    <hr>
+                    <div class="prices-block">
+                        <p>до 1 сут.</p>
+                        <p><?=$good['price_one']?> руб.</p>
+                        <p>от 2 до 5 сут.</p>
+                        <p><?=$good['price_two']?> руб.</p>
+                        <p>от 5 сут.</p>
+                        <p><?=$good['price_three']?> руб.</p>
+                    </div>
                     <a href="/show/<?=$good['slug']?>">Подробнее</a>
                 </div>
             <?php endforeach;?>

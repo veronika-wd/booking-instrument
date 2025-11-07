@@ -2,7 +2,14 @@
     margin: 0;
     padding: 0;
     font-family: "DejaVu Sans";
+
+    box-sizing: border-box;
 }
+
+body{
+    min-height: 100vh;
+}
+
 
 header{
     width: 100vw;
@@ -14,6 +21,7 @@ header{
 }
 
 main{
+    min-height: 100vh;
     display: grid;
     grid-template-columns: 20% 80%;
 }
@@ -26,7 +34,7 @@ main{
     flex-direction: column;
     gap: 7px;
     padding: 5px 10px;
-    height: 100vh;
+    height: 100%;
 }
 
 a{
@@ -78,6 +86,7 @@ button:hover{
     width: 300px;
     border-radius: 5px;
     padding: 5px 10px;
+    gap: 10px;
 }
 
 /* Общие стили для таблицы (опционально, для красоты) */
@@ -124,4 +133,10 @@ table a:hover{
 .add-but{
     width: 200px;
     margin: 10px auto;
+}
+
+/*Блок цен на карточках товаров*/
+.prices-block{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }

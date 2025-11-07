@@ -17,6 +17,9 @@
         <?php endforeach;?>
     </select>
     <textarea name="description" id="desc" cols="30" rows="10"><?= $good['description']?></textarea>
+    <input type="number" name="price-one" value="<?=$good['price_one']?>" placeholder="Цена до 1 сут.">
+    <input type="number" name="price-two" value="<?=$good['price_two']?>" placeholder="Цена от 2 до 5 сут.">
+    <input type="number" name="price-three" value="<?=$good['price_three']?>" placeholder="Цена от 5 сут.">
     <input type="submit" value="Редактировать">
 </form>
 </body>
